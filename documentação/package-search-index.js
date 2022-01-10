@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.desafio.publica.desafiopubfuture"},{"l":"com.desafio.publica.desafiopubfuture.controller"},{"l":"com.desafio.publica.desafiopubfuture.model"},{"l":"com.desafio.publica.desafiopubfuture.repository"}]
