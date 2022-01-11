@@ -18,22 +18,38 @@ USE `desafiopubfuture`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `conta`
+-- Table structure for table `conta`
 --
 
-LOCK TABLES `conta` WRITE;
-/*!40000 ALTER TABLE `conta` DISABLE KEYS */;
-/*!40000 ALTER TABLE `conta` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `conta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `conta` (
+  `id_conta` int NOT NULL AUTO_INCREMENT,
+  `saldo` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `instituicao_financeira` varchar(30) DEFAULT NULL,
+  `tipo_conta` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id_conta`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `despesa`
+-- Table structure for table `despesa`
 --
 
-LOCK TABLES `despesa` WRITE;
-/*!40000 ALTER TABLE `despesa` DISABLE KEYS */;
-/*!40000 ALTER TABLE `despesa` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `despesa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `despesa` (
+  `id_despesa` int NOT NULL AUTO_INCREMENT,
+  `valor` decimal(12,2) NOT NULL,
+  `data_despesa` timestamp NOT NULL,
+  `data_esperada` date DEFAULT NULL,
+  `id_conta` int NOT NULL,
+  `tipo_despesa` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_despesa`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -147,13 +163,23 @@ DELIMITER ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
--- Dumping data for table `receita`
+-- Table structure for table `receita`
 --
 
-LOCK TABLES `receita` WRITE;
-/*!40000 ALTER TABLE `receita` DISABLE KEYS */;
-/*!40000 ALTER TABLE `receita` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `receita`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `receita` (
+  `id_receita` int NOT NULL AUTO_INCREMENT,
+  `valor` decimal(12,2) NOT NULL,
+  `data_esperada` date NOT NULL,
+  `data_receita` timestamp NULL DEFAULT NULL,
+  `descricao` varchar(50) NOT NULL,
+  `tipo_receita` varchar(45) NOT NULL,
+  `id_conta` int NOT NULL,
+  PRIMARY KEY (`id_receita`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -283,4 +309,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-10 23:49:23
+-- Dump completed on 2022-01-11  1:45:26
