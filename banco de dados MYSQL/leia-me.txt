@@ -1,0 +1,5 @@
+Banco de dados MYSQL
+
+arquivo "desafiopubfuture" é um dump do banco de dados
+arquivo "modelo desafiopubfuture" é um diagrama do banco de dados
+arquino "pdf desafiopubfuture" é um arquivo .pdf do diagrama

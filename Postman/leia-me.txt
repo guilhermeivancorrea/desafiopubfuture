@@ -1,0 +1,5 @@
+Os requests estão pré cadastradas e foram exportadas do POSTMAN
+
+https://www.postman.com/downloads/
+
+arquivo "PubFuture.postman_collection.json" para importar os requests

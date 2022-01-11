@@ -1,0 +1,1257 @@
+{
+	"info": {
+		"_postman_id": "f8bb4b52-ee75-4916-9808-9b718d967deb",
+		"name": "PubFuture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Receita",
+			"item": [
+				{
+					"name": "Listar receita por data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/receita/data?inicial=2022-01-03&fim=2022-01-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"receita",
+								"data"
+							],
+							"query": [
+								{
+									"key": "inicial",
+									"value": "2022-01-03"
+								},
+								{
+									"key": "fim",
+									"value": "2022-01-10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar receita por tipo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/receita/tipo?tipo=salario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"receita",
+								"tipo"
+							],
+							"query": [
+								{
+									"key": "tipo",
+									"value": "salario"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todas as receitas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/receitas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"receitas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna soma total Receitas (double)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/receita",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"receita"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna Receita por ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/receita/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"receita",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar receita",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valor\": 300.0,\r\n    \"dataReceita\": \"2022-01-08\",\r\n    \"dataEsperada\": null,\r\n    \"descricao\": \"loja\",\r\n    \"tipoReceita\": \"salario\",\r\n    \"id_conta\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/receita",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"receita"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edita receita",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idReceita\":1,\r\n    \"valor\": 300.0,\r\n    \"dataReceita\": \"2022-01-08\",\r\n    \"dataEsperada\": null,\r\n    \"descricao\": \"loja\",\r\n    \"tipoReceita\": \"salario\",\r\n    \"id_conta\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/receita",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"receita"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta receita por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/receita/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"receita",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Despesa",
+			"item": [
+				{
+					"name": "Listar despesa por data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/despesa/data?inicial=2022-01-03&fim=2022-01-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"despesa",
+								"data"
+							],
+							"query": [
+								{
+									"key": "inicial",
+									"value": "2022-01-03"
+								},
+								{
+									"key": "fim",
+									"value": "2022-01-10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar despesa por tipo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/despesa/tipo?tipo=salario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"despesa",
+								"tipo"
+							],
+							"query": [
+								{
+									"key": "tipo",
+									"value": "salario"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todas as despesas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/despesas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"despesas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna soma total despesas (double)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/despesa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"despesa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna despesa por ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/despesa/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"despesa",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar despesa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"valor\": -10.0,\r\n    \"dataDespesa\": \"2022-01-08\",\r\n    \"dataEsperada\": null,\r\n    \"tipoDespesa\": \"pão\",\r\n    \"id_conta\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/despesa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"despesa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edita despesa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idDespesa\":1,\r\n    \"valor\": 300.0,\r\n    \"dataDespesa\": \"2022-01-08\",\r\n    \"dataEsperada\": null,\r\n    \"tipoDespesa\": \"salario\",\r\n    \"id_conta\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/receita",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"receita"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta receita por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/receita/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"receita",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Conta",
+			"item": [
+				{
+					"name": "Listas todas as Contas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/contas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"contas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna conta por ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/conta/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"conta",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna soma total das Contas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/conta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"conta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adiciona Nova Conta",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"saldo\": 0.00,\r\n        \"tipoConta\": \"conta corrente\",\r\n        \"instituicaoFinanceira\": \"viacredi\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/conta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"conta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edita Conta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idConta\": 1,\r\n        \"saldo\": 1891.5,\r\n        \"tipoConta\": \"conta corrente\",\r\n        \"instituicaoFinanceira\": \"viacredi\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/despesa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"despesa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferir entre Contas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/transferir?idorigem=1&iddestino=3&valor=2000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"transferir"
+							],
+							"query": [
+								{
+									"key": "idorigem",
+									"value": "1"
+								},
+								{
+									"key": "iddestino",
+									"value": "3"
+								},
+								{
+									"key": "valor",
+									"value": "2000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta Conta por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:999/conta/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "999",
+							"path": [
+								"conta",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
