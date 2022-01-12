@@ -30,7 +30,7 @@ CREATE TABLE `conta` (
   `instituicao_financeira` varchar(30) DEFAULT NULL,
   `tipo_conta` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id_conta`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,12 +43,12 @@ DROP TABLE IF EXISTS `despesa`;
 CREATE TABLE `despesa` (
   `id_despesa` int NOT NULL AUTO_INCREMENT,
   `valor` decimal(12,2) NOT NULL,
-  `data_despesa` timestamp NOT NULL,
-  `data_esperada` date DEFAULT NULL,
+  `data_despesa` datetime DEFAULT CURRENT_TIMESTAMP,
+  `data_esperada` datetime DEFAULT NULL,
   `id_conta` int NOT NULL,
   `tipo_despesa` varchar(45) NOT NULL,
   PRIMARY KEY (`id_despesa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -172,13 +172,13 @@ DROP TABLE IF EXISTS `receita`;
 CREATE TABLE `receita` (
   `id_receita` int NOT NULL AUTO_INCREMENT,
   `valor` decimal(12,2) NOT NULL,
-  `data_esperada` date NOT NULL,
-  `data_receita` timestamp NULL DEFAULT NULL,
+  `data_esperada` datetime DEFAULT NULL,
+  `data_receita` datetime DEFAULT CURRENT_TIMESTAMP,
   `descricao` varchar(50) NOT NULL,
   `tipo_receita` varchar(45) NOT NULL,
   `id_conta` int NOT NULL,
   PRIMARY KEY (`id_receita`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -309,4 +309,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-11  1:45:26
+-- Dump completed on 2022-01-12 12:56:27
