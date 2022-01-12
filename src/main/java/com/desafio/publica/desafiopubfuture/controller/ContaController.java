@@ -40,7 +40,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.desafio.publica.desafiopubfuture.model.Conta;
-
+import com.desafio.publica.desafiopubfuture.model.Despesa;
+import com.desafio.publica.desafiopubfuture.model.Receita;
 import com.desafio.publica.desafiopubfuture.repository.ContaRepository;
 
 @RestController
@@ -48,8 +49,15 @@ public class ContaController {
 
 	@Autowired
 	private ContaRepository repository;
-	private Conta origem;
-	private Conta destino;
+	
+	@Autowired
+	private ReceitaController receitaController;
+	
+	@Autowired
+	private DespesaController despesaController;
+	
+	private Despesa origem;
+	private Receita destino;
 
 	// Adicionar Conta
 	@Transactional
@@ -76,32 +84,25 @@ public class ContaController {
 			@RequestParam(name = "iddestino", required = true) int iddestino,
 			@RequestParam(name = "valor", required = true) Double valor) {
 
-		Optional<Conta> contaOrigem = findByConta(idorigem);
-		Optional<Conta> contaDestino = findByConta(iddestino);
+		
+		
 
-		origem = new Conta();
-		origem.setIdConta(contaOrigem.get().getIdConta());
-		origem.setSaldo(contaOrigem.get().getSaldo());
-		origem.setTipoConta(contaOrigem.get().getTipoConta());
-		origem.setInstituicaoFinanceira(contaOrigem.get().getInstituicaoFinanceira());
+		origem = new Despesa();
+		origem.setValor(valor*-1);
+		origem.setTipoDespesa("Transf. para conta " + iddestino);
+		origem.setId_conta(idorigem);
 
-		destino = new Conta();
-		destino.setIdConta(contaDestino.get().getIdConta());
-		destino.setSaldo(contaDestino.get().getSaldo());
-		destino.setTipoConta(contaDestino.get().getTipoConta());
-		destino.setInstituicaoFinanceira(contaDestino.get().getInstituicaoFinanceira());
+		destino = new Receita();
+		destino.setValor(valor);
+		destino.setDescricao("Transf. Recebida da conta " + idorigem);
+		destino.setTipoReceita("Transferecia");
+		destino.setId_conta(iddestino);
 
-		if (origem.getSaldo() >= valor) {
+		
+		receitaController.salvar(destino);
+		despesaController.salvar(origem);
+			
 
-			origem.setSaldo(origem.getSaldo() - valor);
-			editar(origem);
-			destino.setSaldo(destino.getSaldo() + valor);
-			editar(destino);
-
-		} else {
-
-			return "Saldo Insuficiente";
-		}
 
 		return "Transferencia realizada com sucesso";
 
